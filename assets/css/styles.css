@@ -140,6 +140,7 @@ button {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav {
@@ -179,7 +180,7 @@ button {
     right: -100%;
     width: 100%;
     height: 100%;
-    transition: 0.3s;
+    transition: right 0.3s ease;
   }
 }
 
@@ -195,7 +196,7 @@ button {
   text-transform: uppercase;
   color: var(--text-color-light);
   font-size: var(--h2-font-size);
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav__link:hover {
@@ -225,10 +226,6 @@ button {
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
   color: var(--title-color);
-}
-
-.scroll-header .nav__logo-img {
-  mix-blend-mode: difference;
 }
 
 /* Active link */
@@ -1049,10 +1046,11 @@ button {
   display: grid;
   place-items: center;
   z-index: 1000;
+  transition: right 0.3s ease;
 }
 
 /* The size may vary depending 
 on the image of the gif */
 .load__gif {
-  width: 210px;
+  width: 110px;
 }
