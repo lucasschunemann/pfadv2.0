@@ -187,7 +187,7 @@ button {
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
-    background-color: var(--first-color);
+    background-color: #1b1f22;
     top: 0;
     right: -100%;
     width: 100%;
