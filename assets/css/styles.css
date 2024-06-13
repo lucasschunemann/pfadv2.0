@@ -222,6 +222,7 @@ button {
 .nav__list {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Ensure items are equally spaced */
   column-gap: 2rem;
 }
 
@@ -230,6 +231,7 @@ button {
   color: #fff; /* Ensure links are white */
   font-size: 1rem;
   transition: color 0.3s ease;
+  white-space: nowrap; /* Prevent line breaks */
 }
 
 .nav__link:hover {
@@ -392,23 +394,66 @@ button {
   transform: translateY(-0.25rem);
 }
 
-/*=============== REVIEWS ===============*/
+/* Estilo do botão de WhatsApp na seção ESPECIALTY */
+.whatsapp-specialty-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-specialty-button i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.whatsapp-specialty-button:hover {
+  background-color: #128c7e;
+}
+
+/* Estilos para a seção de avaliações */
 .reviews__container {
   padding-bottom: 7rem;
 }
 
-.reviews__content {
+.reviews__header {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.section__subtitle {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.reviews__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
 .reviews__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  text-align: center;
 }
 
 .reviews__card:hover {
@@ -416,23 +461,19 @@ button {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.reviews__shape {
-  background-color: #f7f7f7;
-  text-align: center;
-  padding: 1rem;
-}
-
-.reviews__img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+.reviews__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.reviews__data {
-  padding: 1.5rem;
-  text-align: center;
+.reviews__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
 .reviews__name {
@@ -452,11 +493,27 @@ button {
   display: flex;
   justify-content: center;
   gap: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .reviews__rating i {
   color: #f39c12;
+  font-size: 1.5rem;
+}
+
+.reviews__source {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.reviews__source i {
   font-size: 1.25rem;
+  color: #db4437;
+  margin-right: 0.5rem;
 }
 
 /*=============== QUEM SOMOS ===============*/
@@ -975,22 +1032,30 @@ button {
   }
 }
 
-/*=============== LOAD ===============*/
-.load {
+/* Estilo do botão de WhatsApp */
+.whatsapp-button {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsl(0, 0%, 99%);
-  display: grid;
-  place-items: center;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
   z-index: 1000;
-  transition: right 0.3s ease;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-/* The size may vary depending 
-on the image of the gif */
-.load__gif {
-  width: 110px;
+.whatsapp-button i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
 }
