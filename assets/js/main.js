@@ -101,3 +101,11 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+document
+  .getElementById("whatsapp-button")
+  .addEventListener("click", function () {
+    gtag_report_conversion(
+      "https://api.whatsapp.com/send?phone=554735225124&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20um%20Advogado%20sobre%20minha%20notifica%C3%A7%C3%A3o%20de%20tr%C3%A2nsito"
+    );
+  });
